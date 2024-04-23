@@ -14,7 +14,7 @@ function fetchCountries(sortQuery) {
             return response.json();
         })
         .then(data => {
-            console.log(data); // Log the data structure
+            console.log(data); 
             if (!data || !data.data) {
                 throw new Error('Invalid data format');
             }
@@ -35,5 +35,4 @@ function displayCountries(countries) {
     countryCards.innerHTML = countryCardsHTML;
 }
 
-// Initially fetch countries without sorting
 fetchCountries('');
